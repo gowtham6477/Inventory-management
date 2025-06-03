@@ -5,7 +5,9 @@ A full-stack Inventory Management System with role-based authentication, built u
 ---
 
 ![Preview](pic1.PNG)
+---
 ![Preview](pic2.PNG)
+---
 ![Preview](pic3.PNG)
 
 ## 📦 Features
