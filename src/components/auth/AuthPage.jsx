@@ -72,7 +72,7 @@ const AuthPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-4xl grid md:grid-cols-2 gap-8 items-center">
-        {/* Left side - Branding */}
+        {}
         <div className="text-center md:text-left space-y-6">
           <div className="flex items-center justify-center md:justify-start space-x-2">
             <Package className="h-8 w-8 text-blue-600" />
@@ -104,7 +104,7 @@ const AuthPage = () => {
           </div>
         </div>
 
-        {/* Right side - Auth Forms */}
+        {}
         <Card className="w-full shadow-xl border-0 bg-white/80 backdrop-blur">
           <Tabs defaultValue="login" className="w-full">
             <TabsList className="grid w-full grid-cols-2">

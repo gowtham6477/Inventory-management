@@ -4,7 +4,7 @@ import AdminDashboard from "../admin/AdminDashboard";
 import CustomerDashboard from "../customer/CustomerDashboard";
 import UserManagement from "../admin/UserManagement";
 import { useAuth } from "@/hooks/useAuth";
-import apiClient from "@/api/client"; // Axios instance
+import apiClient from "@/api/client"; 
 
 const Dashboard = () => {
   const { user } = useAuth();

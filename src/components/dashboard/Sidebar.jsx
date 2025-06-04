@@ -1,4 +1,4 @@
-// Sidebar.js
+
 import { Package, ShoppingCart, User, LogOut, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -35,7 +35,7 @@ const Sidebar = ({ userProfile, activeView, onViewChange }) => {
 
   return (
     <div className="w-64 bg-white shadow-lg flex flex-col">
-      {/* Header */}
+      {}
       <div className="p-6 border-b">
         <div className="flex items-center space-x-3">
           <Package className="h-8 w-8 text-blue-600" />
@@ -46,7 +46,7 @@ const Sidebar = ({ userProfile, activeView, onViewChange }) => {
         </div>
       </div>
 
-      {/* User Info */}
+      {}
       <div className="p-4 border-b">
         <div className="flex items-center space-x-3">
           <Avatar>
@@ -61,7 +61,7 @@ const Sidebar = ({ userProfile, activeView, onViewChange }) => {
         </div>
       </div>
 
-      {/* Navigation */}
+      {}
       <nav className="flex-1 p-4">
         <ul className="space-y-2">
           {menuItems.map((item) => {
@@ -82,7 +82,7 @@ const Sidebar = ({ userProfile, activeView, onViewChange }) => {
         </ul>
       </nav>
 
-      {/* Logout */}
+      {}
       <div className="p-4 border-t">
         <Button 
           variant="outline" 

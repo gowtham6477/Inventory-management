@@ -5,13 +5,10 @@ const authenticateToken = require('../middleware/auth');
 
 const router = express.Router();
 
-// Protect all product routes
+
 router.use(authenticateToken);
 
-/**
- * GET /api/products
- * Fetch all products
- */
+
 router.get('/', async (req, res) => {
   try {
     const products = await Product.find().sort({ createdAt: -1 });
@@ -22,10 +19,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-/**
- * GET /api/products/:id
- * Fetch a product by ID
- */
+
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
 
@@ -45,10 +39,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-/**
- * POST /api/products
- * Create a new product
- */
+
 router.post('/', async (req, res) => {
   try {
     const { name, category, description, price, quantity } = req.body;
@@ -73,10 +64,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-/**
- * PUT /api/products/:id
- * Update an existing product
- */
+
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
 
@@ -106,10 +94,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-/**
- * DELETE /api/products/:id
- * Delete a product
- */
+
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
 

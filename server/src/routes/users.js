@@ -4,7 +4,7 @@ const User = require('../models/User');
 
 const router = express.Router();
 
-// JWT Authentication Middleware
+
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
@@ -22,15 +22,15 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-// GET /api/users - Admin only endpoint to list all users
+
 router.get('/', authenticateToken, async (req, res) => {
   try {
-    // Check if user has admin role
+    
     if (req.user.role !== 'admin') {
       return res.status(403).json({ message: 'Admin access required' });
     }
 
-    // Fetch all users excluding password hash
+    
     const users = await User.find().select('-passwordHash');
     
     res.json(users);

@@ -41,7 +41,7 @@ const ProductCatalog = () => {
 
   const fetchProducts = async () => {
     try {
-      // Assumes backend supports ?inStock=true to filter products with quantity > 0
+      
       const response = await apiClient.get("/products?inStock=true");
       setProducts(response.data || []);
     } catch (error) {
@@ -91,7 +91,7 @@ const ProductCatalog = () => {
 
     setLoading(true);
 
-    // Only send product ID and quantity, backend uses req.user.id and calculates price
+    
     const orderData = {
       product: selectedProduct._id || selectedProduct.id,
       quantity: orderQuantity,
@@ -185,7 +185,7 @@ const ProductCatalog = () => {
                 </div>
               </div>
 
-              {/* Use plain Button here, no DialogTrigger */}
+              {}
               <Button
                 className="w-full"
                 onClick={() => {
@@ -201,7 +201,7 @@ const ProductCatalog = () => {
         ))}
       </div>
 
-      {/* Dialog rendered outside the map */}
+      {}
       <Dialog
         open={Boolean(selectedProduct)}
         onOpenChange={(open) => !open && setSelectedProduct(null)}

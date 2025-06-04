@@ -22,7 +22,7 @@ const OrderManagement = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // Fetch orders from API
+  
   const fetchOrders = async () => {
     try {
       const response = await apiClient.get("/orders");
@@ -40,7 +40,7 @@ const OrderManagement = () => {
     fetchOrders();
   }, []);
 
-  // Update order status API call
+  
   const handleStatusChange = async (orderId, newStatus) => {
     if (!orderId) {
       toast({
@@ -97,7 +97,7 @@ const OrderManagement = () => {
         <p className="text-gray-600">Monitor and manage customer orders</p>
       </header>
 
-      {/* Statistics Cards */}
+      {}
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="flex justify-between pb-2">
@@ -127,7 +127,7 @@ const OrderManagement = () => {
         </Card>
       </div>
 
-      {/* Orders List */}
+      {}
       <div className="space-y-4">
         {orders.map((order) => (
           <Card

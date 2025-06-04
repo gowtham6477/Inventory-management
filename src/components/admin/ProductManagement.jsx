@@ -15,7 +15,7 @@ import {
 import {
   Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger
 } from "@/components/ui/dialog";
-import apiClient from "@/api/client"; // Custom Axios instance
+import apiClient from "@/api/client"; 
 import { useToast } from "@/hooks/use-toast";
 
 const ProductManagement = () => {
@@ -208,7 +208,7 @@ const ProductManagement = () => {
         </Dialog>
       </div>
 
-      {/* Search */}
+      {}
       <Card>
         <CardContent className="p-4">
           <div className="relative">
@@ -223,7 +223,7 @@ const ProductManagement = () => {
         </CardContent>
       </Card>
 
-      {/* Products Grid */}
+      {}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {filteredProducts.map((product) => (
           <Card key={product._id} className="hover:shadow-lg transition-shadow">

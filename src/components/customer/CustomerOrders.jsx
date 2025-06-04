@@ -62,14 +62,14 @@ const CustomerOrders = () => {
 
     setLoading(true);
     try {
-      // Delete order
+      
       await apiClient.delete(`/orders/${orderId}`);
 
-      // Fetch current product quantity
+      
       const productResponse = await apiClient.get(`/products/${productId}`);
       const currentQuantity = productResponse.data?.quantity || 0;
 
-      // Update product with restored quantity
+      
       await apiClient.put(`/products/${productId}`, {
         quantity: currentQuantity + quantity,
       });

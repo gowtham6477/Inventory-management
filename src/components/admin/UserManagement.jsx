@@ -15,7 +15,7 @@ const UserManagement = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch users from API
+  
   const fetchUsers = async () => {
     setLoading(true);
     try {
@@ -71,7 +71,7 @@ const UserManagement = () => {
         <p className="text-gray-600">Manage system users and their roles</p>
       </header>
 
-      {/* Statistics Cards */}
+      {}
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="flex justify-between pb-2">
@@ -101,7 +101,7 @@ const UserManagement = () => {
         </Card>
       </div>
 
-      {/* Users List */}
+      {}
       <div className="space-y-4">
         {users.length === 0 ? (
           <Card>

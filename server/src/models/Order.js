@@ -31,7 +31,7 @@ const orderSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Transform output to use consistent field naming
+
 orderSchema.set('toJSON', {
   virtuals: true,
   transform(doc, ret) {

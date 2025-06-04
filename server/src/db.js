@@ -1,10 +1,10 @@
-// server/src/db.js
+
 
 const path = require('path');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
-// Load environment variables from server/.env
+
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const { MONGODB_URI } = process.env;
@@ -27,5 +27,5 @@ mongoose
     process.exit(1);
   });
 
-// Export mongoose to use the connection and models elsewhere
+
 module.exports = mongoose;

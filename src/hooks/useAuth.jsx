@@ -1,5 +1,5 @@
 import { useState, useEffect, createContext, useContext } from 'react';
-import apiClient from '@/api/client'; // your axios/fetch wrapper
+import apiClient from '@/api/client'; 
 
 const AuthContext = createContext({});
 
@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Decode token and set user from localStorage
+  
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -16,9 +16,9 @@ export const AuthProvider = ({ children }) => {
 
         if (payload.exp * 1000 > Date.now()) {
           setUser({
-            id: payload.id,              // ✅ FIXED from userId to id
+            id: payload.id,              
             email: payload.email,
-            name: payload.name,          // will be undefined unless included in token
+            name: payload.name,          
             role: payload.role,
           });
         } else {
